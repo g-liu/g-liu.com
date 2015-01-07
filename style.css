@@ -1,0 +1,290 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+	font-size: 20px;
+}
+body {
+	background-color: black;
+	margin: 0;
+	height: 100%;
+	font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+	color: white;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	zoom: 1;
+}
+
+/* Dead Simple Grid (c) 2012 Vladimir Agafonkin */
+
+.col {
+	padding: 0 1em;
+}
+.row .row {
+	margin: 0 -1em;
+}
+
+.row:before, .row:after {
+	content: "";
+	display: table;
+}
+.row:after {
+	clear: both;
+}
+
+@media only screen {
+	.col {
+		float: left;
+		text-align: left;
+		width: 100%;
+
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+}
+@media only screen and (min-width: 800px) {
+	.col.half {
+		width: 50%;
+	}
+	.col.fourth {
+		width: 25%;
+	}
+	.col.three.fourths {
+		width: 75%;
+	}
+}
+
+#page {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 3.5em;
+	margin: 0;
+}
+
+h2.sub {
+	color: #ddd;
+	margin-top: 0.1em;
+}
+h2.sub abbr {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+input, textarea, button {
+	font-family: 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
+	font-size: 80%;
+	width: 100%;
+	background: transparent;
+	color: white;
+	border: 1px solid #eee;
+	padding: 0.75em;
+	margin-bottom: 1em;
+}
+input[type=reset],
+input[type=submit],
+input[type=button] {
+	cursor: pointer;
+
+	-webkit-transition: background-color 0.15s ease-out;
+	transition: background-color 0.15s ease-out;
+}
+input[type=reset]:hover,
+input[type=reset]:focus,
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=button]:hover,
+input[type=button]:focus {
+	background-color: rgba(1, 255, 112, 0.33);
+}
+textarea {
+	resize: vertical;
+	height: 10em;
+}
+
+::-webkit-input-placeholder {
+   color: #bbb;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #bbb;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #bbb;  
+}
+
+:-ms-input-placeholder {  
+   color: #bbb;  
+}
+
+#page section {
+	display: table;
+	width: 100%;
+	height: 100%; /* Firefox bug 307866 prevents min-height */
+	padding: 1em;
+}
+#page section:nth-of-type(odd) {
+	background-color: #191627;
+}
+
+section#home h1,
+section#home h2,
+section#home #ext-links {
+	-webkit-animation: fade-in 0.5s ease-out;
+	animation: fade-in 0.5s ease-out;
+	-webkit-animation-fill-mode: backwards;
+	animation-fill-mode: backwards;
+}
+section#home h2 {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+section#home #ext-links {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+
+section#about,
+section#contact {
+	display: none !important;
+}
+
+section#home {
+	background-image: url(poly.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+div.content.middle {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#ext-links a {
+	display: inline-block;
+	border-radius: 50%;
+	font-size: 3em;
+	padding: 10px;
+	text-align: center;
+
+	-webkit-transition: transform 0.15s ease-out, color 0.15s ease-out;
+	transition: transform 0.15s ease-out, color 0.15s ease-out;
+}
+#ext-links a:hover {
+	transform: scale(1.5);
+}
+
+a#github span {
+	color: white;
+}
+
+a#linkedin span {
+	color: #0077B5;
+}
+a#linkedin:hover span {
+	color: #00A0DC;
+}
+
+a#twitter span {
+	color: #00B6F1;
+}
+
+a#blog span {
+	color: #D54E21;
+}
+
+#go-down {
+	display: block;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.9);
+	position: absolute;
+	bottom: 1em;
+	left: 0;
+	text-align: center;
+}
+
+#go-down:hover {
+	-webkit-animation: go-down 1s ease-in-out;
+	animation: go-down 1s ease-in-out;
+}
+
+@-webkit-keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes go-down {
+	0%, 50% {
+		transform: translateY(0);
+	}
+
+	25% {
+		transform: translateY(0.333em);
+	}
+
+	75% {
+		transform: translateY(0.25em);
+	}
+}
+
+@keyframes go-down {
+	0%, 50% {
+		transform: translateY(0);
+	}
+
+	25% {
+		transform: translateY(0.333em);
+	}
+
+	75% {
+		transform: translateY(0.25em);
+	}
+}
+
+
+@media print {
+	body {
+		background-color: inherit;
+		color: inherit;
+	}
+
+	h2.sub {
+		color: inherit;
+	}
+
+	section#home {
+		background-image: none;
+	}
+
+	a#github span {
+		color: black;
+	}
+}
