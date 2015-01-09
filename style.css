@@ -51,12 +51,13 @@ body {
 		        box-sizing: border-box;
 	}
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 960px) {
 	.row.narrow {
 		max-width: 80%;
 		margin: 0 auto;
 	}
-
+}
+@media only screen and (min-width: 800px) {
 	.col.half {
 		width: 50%;
 	}
@@ -105,11 +106,19 @@ h2.sub abbr {
 	border-bottom: none;
 }
 
+h3 {
+	font-size: 1.5em;
+}
+
 img {
 	vertical-align: bottom;
 }
 
-input, textarea, button {
+input[type=text],
+input[type=email],
+input[type=submit],
+textarea,
+button {
 	font-family: 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
 	font-size: 80%;
 	width: 100%;
@@ -118,6 +127,9 @@ input, textarea, button {
 	border: 1px solid #eee;
 	padding: 0.75em;
 	margin-bottom: 1em;
+
+	-webkit-transition: outline 0.15s;
+	transition: outline 0.15s;
 }
 input[type=reset],
 input[type=submit],
@@ -211,6 +223,7 @@ article.project a {
 }
 
 div.img-holder {
+	position: relative;
 	transform: translateZ(0); /* WebKit fix */
 	width: 200px;
 	height: 200px;
@@ -219,15 +232,43 @@ div.img-holder {
 	display: block;
 	overflow: hidden;
 }
+div.img-holder .link-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	color: transparent;
+	line-height: 200px;
+	font-size: 48px;
+	text-align: center;
+
+	-webkit-transition: background-color 0.15s ease-out, color 0.15s ease-out;
+	transition: background-color 0.15s ease-out, color 0.15s ease-out;
+}
 div.img-holder img {
 	max-height: 100%;
 	-webkit-transition: -webkit-transform 0.15s, -webkit-filter 0.15s;
 	transition: transform 0.15s, filter 0.15s;
 }
+article.project a:active {
+	color: #81D4FA;
+}
 article.project a:hover img,
 article.project a:focus img {
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
+
+	-webkit-filter: brightness(140%) blur(3px);
+	filter: brightness(140%) blur(5px);
+}
+article.project a:hover div.img-holder .link-overlay,
+article.project a:focus div.img-holder .link-overlay {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+	background-color: #333;
+	background-color: rgba(0, 0, 0, 0.66);
+	color: white;
 }
 
 div.content.middle {
@@ -286,9 +327,14 @@ a#blog span {
 	border-bottom: none;
 }
 
-#go-down:hover {
+#go-down:hover,
+#go-down:focus {
 	-webkit-animation: go-down 0.75s ease-in-out;
 	animation: go-down 0.75s ease-in-out;
+}
+
+section#copyright {
+	height: auto;
 }
 
 @-webkit-keyframes fade-in {
