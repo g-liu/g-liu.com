@@ -26,10 +26,10 @@ body {
 /* Dead Simple Grid (c) 2012 Vladimir Agafonkin */
 
 .col {
-	padding: 0 1em;
+	padding: 0 1.5em;
 }
 .row .row {
-	margin: 0 -1em;
+	margin: 0 -1.5em;
 }
 
 .row:before, .row:after {
@@ -110,6 +110,10 @@ h3 {
 	font-size: 1.5em;
 }
 
+h3 .hidden-title {
+	display: none;
+}
+
 img {
 	vertical-align: bottom;
 }
@@ -152,6 +156,15 @@ textarea {
 	height: 10em;
 }
 
+span.email {
+	background-color: #222;
+	padding: 0 .25em;
+}
+.obfuscated {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+
 ::-webkit-input-placeholder {
    color: #bbb;
 }
@@ -174,7 +187,7 @@ textarea {
 	height: 100%; /* Firefox bug 307866 prevents min-height */
 	padding: 1em;
 }
-#page section:nth-of-type(odd) {
+#page > section:nth-of-type(odd) {
 	background-color: #191627;
 }
 
@@ -209,6 +222,13 @@ section#home {
 
 section:not(#home) header h2 {
 	font-size: 2em;
+}
+
+section#about .col {
+	text-align: center;
+}
+section#about h3 .fa {
+	font-size: 3em;
 }
 
 article.project {
@@ -269,6 +289,15 @@ article.project a:focus div.img-holder .link-overlay {
 	background-color: #333;
 	background-color: rgba(0, 0, 0, 0.66);
 	color: white;
+}
+
+section#contact form .row {
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+}
+section#contact form .col {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 }
 
 div.content.middle {
