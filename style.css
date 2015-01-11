@@ -13,7 +13,7 @@ html {
 	line-height: 1.428571;
 }
 body {
-	background-color: black;
+	background-color: #111;
 	margin: 0;
 	height: 100%;
 	font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
@@ -156,9 +156,14 @@ textarea {
 	height: 10em;
 }
 
+p {
+	line-height: 1.5;
+}
+
 span.email {
 	background-color: #222;
 	padding: 0 .25em;
+	white-space: nowrap;
 }
 .obfuscated {
 	unicode-bidi: bidi-override;
@@ -416,13 +421,21 @@ section#copyright {
 
 
 @media print {
-	body {
+	body,
+	#page > section:nth-of-type(odd) {
 		background-color: inherit;
 		color: inherit;
 	}
 
 	h2.sub {
 		color: inherit;
+	}
+
+	section#about h3 .fa {
+		display: none;
+	}
+	h3 .hidden-title {
+		display: inherit;
 	}
 
 	section#home {

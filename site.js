@@ -13,4 +13,12 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#contact').submit(function(event) {
+		$.post('send.php', $(this).serialize(), function(data, textStatus, xhr) {
+			alert("Contact submitted successfully.");
+		});
+
+		event.preventDefault();
+	} );
+
 });

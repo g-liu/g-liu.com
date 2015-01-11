@@ -19,7 +19,6 @@
 
 				<div id="ext-links">
 					<a id="github" href="http://github.com/g-liu" title="Portfolio"><span class="fa fa-github"></span></a>
-					<!--<a id="linkedin" href="http://linkedin.com/in/geoffliu" title="LinkedIn"><span class="fa fa-linkedin"></span></a>-->
 					<a id="blog" href="blog"><span class="fa fa-wordpress" title="Blog"></span></a>
 					<a id="twitter" href="http://twitter.com/geo_liu" title="Twitter"><span class="fa fa-twitter"></span></a>
 				</div><!-- #ext-links -->
@@ -44,6 +43,8 @@
 						</header>
 
 						<p>I'm a third-year undergraduate student at the <a href="http://uw.edu">University of Washington</a>, pursuing a double major in Computer Science and Music. My hobbies include biking, crossword puzzles, and collecting posters of all sorts.</p>
+
+						<p><a href="https://github.com/g-liu/resume/blob/master/resume.pdf?raw=true">Check out my r&eacute;sum&eacute;</a> to learn more.</p>
 					</article>
 					<article class="col half">
 						<header>
@@ -53,7 +54,7 @@
 							</h3>
 						</header>
 
-						<p>I am currently an undergraduate TA for <a href="http://courses.cs.washington.edu/courses/cse120/15wi/">CSE 120</a> at the <a href="http://uw.edu">University of Washington</a>.</p>
+						<p>Currently, I am an undergraduate TA for <a href="http://courses.cs.washington.edu/courses/cse120/15wi/">CSE 120</a> at the <a href="http://uw.edu">University of Washington</a>.</p>
 
 						<p>In the past, I have been a webmaster for the <a href="http://asuw.org"><abbr title="Associated Students of the University of Washington">ASUW</abbr></a> (2014), and the sole programming intern at <a href="http://seattlepublishing.com">Seattle Publishing</a> (2014).</p>
 					</article>
@@ -73,7 +74,7 @@
 						<header>
 							<h3 title="Get in touch.">
 								<span class="fa fa-envelope-o"></span>
-								<span class="hidden-title">Get in touch.</span>
+								<span class="hidden-title">Get in touch</span>
 							</h3>
 						</header>
 
@@ -185,54 +186,55 @@
 						</ul>
 					</div>
 					<div class="col half">
-						<form>
+						<form id="contact" action="send.php" method="post">
 							<div class="row">
 								<div class="col half">
-									<input type="text" placeholder="First name" maxlength="48" required />
+									<input type="text" name="first_name" placeholder="First name" maxlength="48" required />
 								</div>
 								<div class="col half">
-									<input type="text" placeholder="Last name" maxlength="48" required />
+									<input type="text" name="last_name" placeholder="Last name" maxlength="48" required />
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<input type="email" placeholder="Email" maxlength="256" required />
+									<input type="email" name="email" placeholder="Email" maxlength="256" required />
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<input type="text" placeholder="Subject" maxlength="100" required />
+									<input type="text" name="subject" placeholder="Subject" maxlength="100" required />
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<textarea placeholder="Message" maxlength="32768" required></textarea>
+									<textarea placeholder="Message" name="message" maxlength="32768" required></textarea>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="col three fourths">
-									<label>
-										<input type="checkbox" /> <span>I am not a robot.</span>
-									</label>
+									<div class="g-recaptcha" data-sitekey="6LcKRAATAAAAAGFHShGSD-mtjgUdiOhSvME4daNo"></div>
 								</div>
 								<div class="col fourth">
-									<input type="submit" value="Send" />
+									<input type="submit" name="submit" value="Send" />
 								</div>
 							</div>
-						</form>
+						</form><!-- #contact -->
 					</div>
 				</div><!-- .row -->
 
 			</div><!-- .content -->
 		</section>
 
-		<section id="copyright">
-			<p>Website made from scratch by Geoffrey Liu.</p>
-		</section>
+		<!--
+			<section id="copyright">
+				<p>Website made from scratch by Geoffrey Liu.</p>
+			</section>
+		-->
 	</div><!-- #page -->
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<script type="text/javascript" src="site.js"></script>
 </body>
 </html>
