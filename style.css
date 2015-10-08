@@ -334,20 +334,20 @@ div.content.middle {
 a#github span {
 	color: white;
 }
-
 a#linkedin span {
 	color: #0077B5;
 }
 a#linkedin:hover span {
 	color: #00A0DC;
 }
-
 a#twitter span {
 	color: #00B6F1;
 }
-
 a#blog span {
 	color: #D54E21;
+}
+a#resume span {
+	color: bisque;
 }
 
 #go-down {
