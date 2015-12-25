@@ -1,0 +1,23 @@
+RewriteEngine On
+
+Options -Indexes
+SetEnv SERVER_ADMIN main@g-liu.com
+# set the default character set
+AddDefaultCharset UTF-8
+# set the default language
+DefaultLanguage en-US
+IndexIgnore *
+# deny access to evil robots site rippers offline browsers and other nasty scum
+RewriteBase /
+RewriteCond %{HTTP_USER_AGENT} ^Anarchie [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ASPSeek [OR]
+RewriteCond %{HTTP_USER_AGENT} ^attach [OR]
+RewriteCond %{HTTP_USER_AGENT} ^autoemailspider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus
+# send em to a virtual blackhole of fake email addresses
+RewriteRule ^.*$ http://www1431804975.leitedepato.com [R,L]
+
+Redirect 301 /resume https://github.com/g-liu/resume/blob/master/resume.pdf
