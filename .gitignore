@@ -3,6 +3,8 @@
 ### g-liu.com ignores ###
 blog
 sandbox
+google*.html
+BingSiteAuth.xml
 
 ### Windows ###
 # Windows image file caches
