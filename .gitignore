@@ -1,5 +1,9 @@
 # Created by https://www.gitignore.io/api/windows,osx,linux,sublimetext,grunt,bower,sass,node
 
+### g-liu.com ignores ###
+blog
+sandbox
+
 ### Windows ###
 # Windows image file caches
 Thumbs.db
