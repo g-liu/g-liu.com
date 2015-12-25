@@ -71,6 +71,13 @@ module.exports = function(grunt) {
         src: 'style.css'
       }
     },
+    jade: {
+      dist: {
+        files: {
+          'index.html': ['index.jade']
+        }
+      }
+    },
     clean: {
       dist: ['vendor/**']
     },
@@ -113,8 +120,8 @@ module.exports = function(grunt) {
         tasks: ['jshint:gruntfile']
       },
       html: {
-        files: ['index.html'],
-        tasks: ['validation:dist']
+        files: ['index.jade'],
+        tasks: ['jade', 'validation:dist']
       },
       js: {
         files: ['site.js'],
@@ -150,6 +157,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-w3c-html-validation');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -159,7 +167,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'validation', 'clean', 'copy:dist', 'sass', 'postcss', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'clean', 'copy:dist', 'sass', 'postcss', 'uglify', 'cssmin', 'jade', 'validation']);
 
   // Serves up the website
   grunt.registerTask('serve', ['default', 'concurrent:run']);
