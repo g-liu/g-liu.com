@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
+$small: 480px;
 
 * {
 	box-sizing: border-box;
@@ -332,6 +333,10 @@ div.content.middle {
 
 			text-shadow: 1px 1px 10px rgba(0,0,0,0.25);
 		}
+	}
+
+	@media screen and (max-width: $small) {
+		font-size: 1.5em;
 	}
 }
 

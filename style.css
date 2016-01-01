@@ -270,6 +270,9 @@ div.content.middle {
             transform: scale(1.5); }
     #ext-links a:hover span, #ext-links a:focus span {
       text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25); }
+  @media screen and (max-width: 480px) {
+    #ext-links a {
+      font-size: 1.5em; } }
 
 a#github span {
   color: white; }
