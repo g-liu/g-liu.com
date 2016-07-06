@@ -21,3 +21,5 @@ RewriteCond %{HTTP_USER_AGENT} ^Zeus
 RewriteRule ^.*$ http://www1431804975.leitedepato.com [R,L]
 
 Redirect 301 /resume https://github.com/g-liu/resume/blob/master/resume.pdf
+Redirect 301 /css3 http://slides.com/g-liu/css3-animation/live
+Redirect 301 /git  http://slides.com/g-liu/git-workshop/live
