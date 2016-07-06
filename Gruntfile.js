@@ -122,7 +122,7 @@ module.exports = function(grunt) {
         tasks: ['jshint:gruntfile']
       },
       html: {
-        files: ['index.jade', 'includes/*.jade'],
+        files: ['*.jade'],
         tasks: ['jade', 'validation:dist']
       },
       js: {
