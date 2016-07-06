@@ -238,7 +238,7 @@ section#about {
 article.project {
 	text-align: center;
 	margin-bottom: 3em;
-	a {
+	> a {
 		display: block;
 		color: inherit;
 		border-bottom: none;
@@ -318,8 +318,8 @@ div.content.middle {
 #ext-links a {
 	display: inline-block;
 	border-radius: 50%;
-	font-size: 3em;
-	padding: 10px;
+	font-size: 2.8em;
+	padding: 0 12px;
 	text-align: center;
 
 	transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease-out;
@@ -327,10 +327,9 @@ div.content.middle {
 	&:hover,
 	&:focus {
 		border-bottom: none;
-		transform: scale(1.5);
+		transform: scale(1.4);
 
 		span {
-
 			text-shadow: 1px 1px 10px rgba(0,0,0,0.25);
 		}
 	}

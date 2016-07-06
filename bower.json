@@ -1,0 +1,25 @@
+{
+  "name": "g-liu.com",
+  "description": "Geoffrey Liu's website",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Geoffrey Liu"
+  ],
+  "keywords": [
+    "website",
+    "personal"
+  ],
+  "homepage": "http://g-liu.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "normalize-css": "^4.2.0"
+  }
+}
