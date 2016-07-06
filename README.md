@@ -8,6 +8,7 @@ Development
 First, install all dependencies
 
     npm install && npm update
+    bower install
 
 To build the website
 
